@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Patch Neranartkomol
+          API Data Bash Shell Script Example for Analysts - Patch Neranartkomol
         
     </title>
 
-    <link rel="canonical" href="http://www.patchneranartkomol.com/404.html">
+    <link rel="canonical" href="http://www.patchneranartkomol.com/2017/07/17/hello-world/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -69,8 +69,8 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('/img/404-bg.jpg')
-            /*page*/
+            background-image: url('home-bg-2-dark.png')
+            /*post*/
         
     }
     
@@ -87,10 +87,16 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 
-                    <div class="site-heading">
-                        <h1>Patch Neranartkomol</h1>
-                        <!--<hr class="small">-->
-                        <span class="subheading">你来到了没有知识的荒原 :(</span>
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                        </div>
+                        <h1>API Data Bash Shell Script Example for Analysts</h1>
+                        <h2 class="subheading">Getting Started With Public Data</h2>
+                        <span class="meta">
+                            Posted by Patch Neranartkomol on
+                            2017-07-17
+                        </span>
                     </div>
                 
 
@@ -193,25 +199,119 @@
 
 
     <!-- Main Content -->
-    
-<!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/404-bg.jpg')">
+    <!-- Modify by Yu-Hsuan Yen -->
+
+<!-- Post Content -->
+<article>
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>404</h1>
-                    <!--<hr class="small">-->
-                    <span class="subheading">你来到了没有知识的荒原 :(</span>
-                </div>
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <p>In 2014, Mayor Eric Garcetti launched a portal for <a href="https://data.lacity.org/" title="DataLA" target="_blank" rel="external">Open Data</a> for the city of Los Angeles, to promote transparency and accountability.</p>
+<p>For example, let’s look at this data set:<br>
+<a href="https://dev.socrata.com/foundry/data.lacity.org/7fvc-faax" title="Crime Data From 2010 to Present" target="_blank" rel="external">Crime Data From 2010 to Present</a></p>
+<p>If you’re on a UNIX based operating system, most often this will mean your Macbook, you can open up the Terminal program, which opens a bash shell, and make a request to the API. For the purposes of just testing the API, we can run the following command:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ curl https://data.lacity.org/resource/7fvc-faax.json</div></pre></td></tr></table></figure>
+<p>You’ll probably what looks quite like gibberish, since this returns a big, unformatted JSON object right to you. So instead, let’s grab the data in a different format, and store it in a data type that a very popular program can read. We’ll grab the CSV from the API and use output redirection via the &gt; operator to store this data in a file called <code>la_city_data.csv</code> that can be opened in Microsoft Excel.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ curl https://data.lacity.org/resource/7fvc-faax.csv &gt; la_city_data.csv</div></pre></td></tr></table></figure>
+                
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                    
+                </ul>
+
+                <!-- duoshuo Share start -->
+                
+                <!-- 多说 Share end-->
+
+                <!-- 多说评论框 start -->
+                
+                <!-- 多说评论框 end -->
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="nav">none</ol>
+        
+        </div>
+      </aside>
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+
+                <!-- Friends Blog -->
+                
             </div>
         </div>
     </div>
-</header>
+</article>
 
+
+
+
+
+
+
+<!-- async load function -->
 <script>
-    document.body.classList.add('page-fullscreen');
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
 </script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
 
 
     <!-- Footer -->
