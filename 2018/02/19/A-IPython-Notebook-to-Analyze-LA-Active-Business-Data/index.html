@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          API Data Bash Shell Script Example for Analysts - Patch Neranartkomol
+          A IPython Notebook to Analyze LA Active Business Data - Patch Neranartkomol
         
     </title>
 
-    <link rel="canonical" href="http://www.patchneranartkomol.com/2017/07/17/hello-world/">
+    <link rel="canonical" href="http://www.patchneranartkomol.com/2018/02/19/A-IPython-Notebook-to-Analyze-LA-Active-Business-Data/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -112,11 +112,11 @@
                         <div class="tags">
                             
                         </div>
-                        <h1>API Data Bash Shell Script Example for Analysts</h1>
-                        <h2 class="subheading">Getting Started With Public Data</h2>
+                        <h1>A IPython Notebook to Analyze LA Active Business Data</h1>
+                        <h2 class="subheading">Open Data Map with Folium</h2>
                         <span class="meta">
                             Posted by Patch Neranartkomol on
-                            2017-07-17
+                            2018-02-19
                         </span>
                     </div>
                 
@@ -226,23 +226,39 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p>In 2014, Mayor Eric Garcetti launched a portal for <a href="https://data.lacity.org/" title="DataLA" target="_blank" rel="noopener">Open Data</a> for the city of Los Angeles, to promote transparency and accountability.</p>
-<p>For example, let’s look at this data set:<br>
-<a href="https://dev.socrata.com/foundry/data.lacity.org/7fvc-faax" title="Crime Data From 2010 to Present" target="_blank" rel="noopener">Crime Data From 2010 to Present</a></p>
-<p>If you’re on a UNIX based operating system, most often this will mean your Macbook, you can open up the Terminal program, which opens a bash shell, and make a request to the API. For the purposes of just testing the API, we can run the following command:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl https://data.lacity.org/resource/7fvc-faax.json</span><br></pre></td></tr></table></figure>
-<p>You’ll probably what looks quite like gibberish, since this returns a big, unformatted JSON object right to you. So instead, let’s grab the data in a different format, and store it in a data type that a very popular program can read. We’ll grab the CSV from the API and use output redirection via the &gt; operator to store this data in a file called <code>la_city_data.csv</code> that can be opened in Microsoft Excel.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl https://data.lacity.org/resource/7fvc-faax.csv &gt; la_city_data.csv</span><br></pre></td></tr></table></figure>
+                <h2 id="a-ipython-notebook-to-analyze-la-active-business-data">A IPython Notebook to Analyze LA Active Business Data</h2>
+<p>As part of the effort to encourage data-journalism and informed activism, the city of Los Angeles partnered with Socrata to share public data on registered local businesses. This data-set is viewable here:<br>
+<a href="https://data.lacity.org/A-Prosperous-City/Listing-of-Active-Businesses/6rrh-rzua" target="_blank" rel="noopener">https://data.lacity.org/A-Prosperous-City/Listing-of-Active-Businesses/6rrh-rzua</a></p>
+<p>This notebook is an attempt to show how the toolkit from the Python stack can be used for a real world data analysis that can allow an LA neighborhood resident to learn more about their community. In this example, we will be building a map of businesses and associated registration and purpose information into a browsable map.</p>
+<p><a href="https://nbviewer.jupyter.org/github/patchneranartkomol/venice_map/blob/master/Venice%2C%20CA%20-%202018%20Active%20Businesses%20Map.ipynb" target="_blank" rel="noopener">https://nbviewer.jupyter.org/github/patchneranartkomol/venice_map/blob/master/Venice%2C CA - 2018 Active Businesses Map.ipynb</a></p>
+<p>To view and run code from a fully interactive version of this Jupyter Notebook, you can set up a notebook server locally. For more information, see Jupyter’s official documentation.</p>
+<h3 id="just-a-few-short-lines-of-code">Just a Few Short Lines of Code</h3>
+<p>The Jupyter Notebook project allows interactive data exploration and visualization, allowing a few short snippets of code to produce rich output: HTML, images, videos, etc. In this notebook, we’re using <a href="https://github.com/python-visualization/folium" target="_blank" rel="noopener">Folium</a>, a Python library for generating interactive maps via the LeafletJS library.</p>
+<p>We begin by making sure that we have a local installation of Python, then using pip to install the Folium and <a href="https://github.com/xmunoz/sodapy" target="_blank" rel="noopener">Sodapy</a>, Socrata’s API client library for Python. That’s as simple as:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install folium</span><br><span class="line">pip install sodapy</span><br></pre></td></tr></table></figure>
+<p>Then we can open up the notebook and import those libraries. The sodapy API allows us to load a list of dictionaries containing the results we’re interested in. In this case, I wanted to pull all the registered businesses in the neighborhood of Venice, and iterate through those to generate a list of markers with business information.</p>
+<h3 id="working-around-a-few-inconsistencies">Working Around A Few Inconsistencies</h3>
+<p>When working with a totally new dataset, Ipython Notebooks provide a really useful interface for quickly munging data. For example, we can print out the first result of the results returned from the Socrata Client by just taking a peek:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">results[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;'business_name': 'CHARCOAL VENICE PARTNERS LLC',</span><br><span class="line"> 'city': 'VENICE',</span><br><span class="line"> 'council_district': '11',</span><br><span class="line"> 'dba_name': 'CHARCOAL VENICE',</span><br><span class="line"> 'location_1': &#123;'coordinates': [-<span class="number">118.4627</span>, <span class="number">33.9815</span>], 'type': 'Point'&#125;,</span><br><span class="line"> 'location_account': '<span class="number">0002798053-0001</span>-3',</span><br><span class="line"> 'location_description': '425 WASHINGTON <span class="number">9029</span>2-<span class="number">5213</span>',</span><br><span class="line"> 'location_start_date': '<span class="number">2015-01-18</span>T00:00:00.000',</span><br><span class="line"> 'mailing_address': '425 WASHINGTON BLVD',</span><br><span class="line"> 'mailing_city': 'VENICE',</span><br><span class="line"> 'mailing_zip_code': '<span class="number">9029</span>2-<span class="number">5213</span>',</span><br><span class="line"> 'naics': '<span class="number">722110</span>',</span><br><span class="line"> 'primary_naics_description': 'Full-service restaurants',</span><br><span class="line"> 'street_address': '425 WASHINGTON BLVD',</span><br><span class="line"> 'zip_code': '<span class="number">9029</span>2-<span class="number">5213</span>'&#125;</span><br></pre></td></tr></table></figure>
+<p>Most notably, the <code>location_1</code> field of the response is a nested dictionary with the longitude and latitude <code>coordinates</code> property. We need to flatten that dictionary and extract the value in latitude and longitude form for folium to use.</p>
+<p>We can write a few methods to flatten the dictionaries and reverse the coordinates so Folium reads in the latitude and longitude correctly. For those purposes of this example, I wrote the <code>flatten</code> and <code>reverse_coordinates</code> methods. Then, when we’re ready to plot out the points onto an instance of a Folium map, we declare a map and iterate through the list of dictionaries:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Create folium Map object centered around Venice, CA</span></span><br><span class="line">m = folium.Map(</span><br><span class="line">    location=[<span class="number">33.9889</span>, <span class="number">-118.4717</span>],</span><br><span class="line">    zoom_start=<span class="number">17</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Iterate through list of businesses in returned data set</span></span><br><span class="line"><span class="comment"># and place a marker on the map with select metadata</span></span><br><span class="line"><span class="keyword">for</span> business <span class="keyword">in</span> results:</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        data = reverse_coordinates(flatten(business))</span><br><span class="line">        info_html_string = <span class="string">'&lt;b&gt; &#123;business&#125; &lt;/b&gt; d.b.a. &#123;dba&#125; - &#123;description&#125;'</span>.format(business=data[<span class="string">'business_name'</span>]</span><br><span class="line">                    ,description=data[<span class="string">'primary_naics_description'</span>]</span><br><span class="line">                    ,dba=data[<span class="string">'dba_name'</span>])</span><br><span class="line">        info_html_string = info_html_string.replace(<span class="string">"'"</span>, <span class="string">r"\'"</span>)</span><br><span class="line">        folium.Marker(data[<span class="string">'coordinates'</span>],popup=info_html_string).add_to(m)</span><br><span class="line">    <span class="keyword">except</span> KeyError:</span><br><span class="line">        <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+<p>Then, simply making a call for the object representation gives us an interactive map right in our the notebook interface.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">m</span><br></pre></td></tr></table></figure>
+<p>We can also save that to a static HTML file that can be rendered on its own browser tab.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Save the output of folium.Map object to an HTML file</span></span><br><span class="line"></span><br><span class="line">m.save(<span class="string">'venice_map.html'</span>)</span><br></pre></td></tr></table></figure>
+
                 
 
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/2018/02/19/A-IPython-Notebook-to-Analyze-LA-Active-Business-Data/" data-toggle="tooltip" data-placement="top" title="A IPython Notebook to Analyze LA Active Business Data">&larr; Previous Post</a>
-                        </li>
                     
+                        <li class="next">
+                            <a href="/2017/07/17/hello-world/" data-toggle="tooltip" data-placement="top" title="API Data Bash Shell Script Example for Analysts">Next Post &rarr;</a>
+                        </li>
                     
                 </ul>
 
@@ -267,7 +283,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#a-ipython-notebook-to-analyze-la-active-business-data"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">A IPython Notebook to Analyze LA Active Business Data</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#just-a-few-short-lines-of-code"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Just a Few Short Lines of Code</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#working-around-a-few-inconsistencies"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Working Around A Few Inconsistencies</span></a></li></ol></li></ol>
         
         </div>
       </aside>
