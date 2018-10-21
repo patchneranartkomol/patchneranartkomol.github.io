@@ -7,15 +7,22 @@
     </url>
     
     <url>
-        <loc>http://www.patchneranartkomol.com/projects/</loc>
-        <lastmod>2018-10-07T00:20:55.116Z</lastmod>
+        <loc>http://www.patchneranartkomol.com/photography/</loc>
+        <lastmod>2018-10-21T21:03:55.150Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>http://www.patchneranartkomol.com/about/</loc>
-        <lastmod>2018-01-01T01:06:55.000Z</lastmod>
+        <lastmod>2018-10-21T20:50:36.027Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://www.patchneranartkomol.com/projects/</loc>
+        <lastmod>2018-10-07T00:20:55.116Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
