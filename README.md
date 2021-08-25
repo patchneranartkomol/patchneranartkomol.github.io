@@ -206,17 +206,6 @@ export const footerData = {
 };
 ```
 
-### Required - Disable GitHub buttons
-
-Set `isEnabled` to `false` once you finish setup your portfolio.\
-By setting to `false` it will hide the GitHub stars/fork buttons
-
-```javascript
-export const githubButtons = {
-  isEnabled: true, // true is the default value
-};
-```
-
 ### Step 2 - STYLES
 
 Change the color theme of the website ( choose 2 colors to create a gradient ):
@@ -254,10 +243,6 @@ TODO: Add github pages Gatsby package and npm deploy script.
 
 - **Patch Neranartkomol** - [https://github.com/patchneranartkomol](https://github.com/patchneranartkomol)
 - **Jacobo Martinez** - [https://github.com/cobidev](https://github.com/cobidev)
-
-## Status
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/2365af6f-820a-4fb8-83e6-69a66f686dfe/deploy-status)](https://app.netlify.com/sites/gatsby-simplefolio/deploys)
 
 ## License 📄
 
