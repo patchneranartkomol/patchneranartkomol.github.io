@@ -224,7 +224,8 @@ $secondary-color: #00cdac;
 
 ## Deployment 📦
 
-TODO: Add github pages Gatsby package and npm deploy script.
+- Run `npm run deploy`.
+- The gh-pages NPM package used to deploy may wipe custom domain settings from the repository, check that in Github.
 
 ## Others versions 👥
 
