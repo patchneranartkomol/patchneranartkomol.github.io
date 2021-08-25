@@ -1,3 +1,9 @@
+# Personal Site
+
+My personal site, hosted on Github pages.
+
+This current version is a lightly modified fork of a Gatsby static site template - Simplefolio.
+
 # Gatsby Simplefolio ⚡️ [![GitHub](https://img.shields.io/github/license/cobidev/gatsby-simplefolio?color=blue)](https://github.com/cobidev/gatsby-simplefolio/blob/master/LICENSE.md) ![GitHub stars](https://img.shields.io/github/stars/cobidev/gatsby-simplefolio) ![GitHub forks](https://img.shields.io/github/forks/cobidev/gatsby-simplefolio)
 
 ## A clean, beautiful and responsive portfolio template for Developers
@@ -19,7 +25,7 @@
 ⚡️ Well organized documentation
 
 To view a demo example, **[click here](https://gatsby-simplefolio.netlify.com/)**\
-To view a live example, **[click here](https://cobidev.com/)**
+To view a live example, **[click here](https://patchneranartkomol.com/)**
 
 ---
 
@@ -57,9 +63,6 @@ $ git clone https://github.com/cobidev/gatsby-simplefolio
 
 # Go into the repository
 $ cd gatsby-simplefolio
-
-# Remove current origin repository
-$ git remote remove origin
 ```
 
 Then you can install the dependencies either using NPM or Yarn:
@@ -232,9 +235,7 @@ $secondary-color: #00cdac;
 
 ## Deployment 📦
 
-Once you have done with your setup. You need to put your website online!
-
-I highly recommend to use [Netlify](https://netlify.com) to achieve this on the EASIEST WAY
+TODO: Add github pages Gatsby package and npm deploy script.
 
 ## Others versions 👥
 
@@ -251,6 +252,7 @@ I highly recommend to use [Netlify](https://netlify.com) to achieve this on the 
 
 ## Authors
 
+- **Patch Neranartkomol** - [https://github.com/patchneranartkomol](https://github.com/patchneranartkomol)
 - **Jacobo Martinez** - [https://github.com/cobidev](https://github.com/cobidev)
 
 ## Status
@@ -260,7 +262,3 @@ I highly recommend to use [Netlify](https://netlify.com) to achieve this on the 
 ## License 📄
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments 🎁
-
-I was motivated to create this project because I wanted to contribute on something useful for the dev community, thanks to [ZTM Community](https://github.com/zero-to-mastery) and [Andrei](https://github.com/aneagoie)
