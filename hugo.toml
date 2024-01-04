@@ -1,0 +1,4 @@
+baseURL = 'https://patchneranartkomol.com/'
+languageCode = 'en-us'
+title = 'Patch Neranartkomol'
+theme = 'hugo-PaperMod'
