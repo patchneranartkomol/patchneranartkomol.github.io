@@ -1,0 +1,8 @@
+baseURL = 'https://patchneranartkomol.com/'
+locale = 'en-us'
+title = 'Patch Neranartkomol'
+theme = 'PaperMod'
+[[menu.main]]
+  name = "Playlists"
+  url = "/playlists/"
+  weight = 10
