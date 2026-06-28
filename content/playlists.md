@@ -303,6 +303,7 @@ Select playlists from iconic clubs listed in Last Night a DJ Saved My Life: The 
 [The Sound Factory (nightclub)](https://en.wikipedia.org/wiki/The_Sound_Factory_(nightclub))
 
 > The Sound Factory was a nightclub first located 532 West 27th Street and then 618 West 46th Street in New York City's Manhattan. The Sound Factory was an integral venue during a peak period of house music in New York. Prominent DJs, artists, and parties appeared at the club. It was in operation from 1989 to 1995.
+
 > The Sound Factory Bar was an offshoot at 12 West 21st Street that was in operation from 1992 to 1997. The club was previously called Private Eyes which was a popular nightspot in the late 1980s and the early 1990s that for its time had an unusually advanced state-of-the-art video and sound system. When the Sound Factory closed in 1995, the Sound Factory Bar continued to operate. Wednesdays housed the recently resurrected Underground Network parties, hosted and promoted by recording artist Barbara Tucker and Don Welch, with Grammy Award winner Little Louie Vega as resident DJ.
 
 (compiled by Rob Di Stefano)
