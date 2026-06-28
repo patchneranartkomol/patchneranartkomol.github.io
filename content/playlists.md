@@ -10,7 +10,8 @@ Select playlists from Last Night a DJ Saved My Life: The History of the Disc Joc
 
 ### Loft 100
 
-<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0VoLBONsa9VftJKaevoYsF?utm_source=generator&theme=0&si=892e5b22d7f24c1b" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<!-- layouts/shortcodes/iframe_loft100.html -->
+{{< iframe_loft100 >}}
 
 {{< details summary="View tracks" >}}
 
