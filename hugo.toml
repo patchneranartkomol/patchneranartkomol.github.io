@@ -1,7 +1,6 @@
 baseURL = 'https://patchneranartkomol.com/'
 locale = 'en-us'
 title = 'Patch Neranartkomol'
-theme = 'PaperMod'
 [[menu.main]]
   name = "Playlists"
   url = "/playlists/"
@@ -9,3 +8,9 @@ theme = 'PaperMod'
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+[module]
+  [[module.imports]]
+    path = "github.com/adityatelange/hugo-PaperMod"
+    disable=false
+
+theme = ["hugo-PaperMod"]
