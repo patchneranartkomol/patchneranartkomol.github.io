@@ -6,3 +6,6 @@ theme = 'PaperMod'
   name = "Playlists"
   url = "/playlists/"
   weight = 10
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
