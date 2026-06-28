@@ -23,5 +23,9 @@ Select playlists from Last Night a DJ Saved My Life: The History of the Disc Joc
 - Blackbyrds — "Walking in Rhythm"
 - Black Rascals — "Keeping My Mind"
 - Brass Construction — "Music Makes You Feel Like Dancing"
+- James Brown — "Give It Up and Turn It Loose"
+- Cándido — "Thousand Finger Man"
+- Cassio — "Baby Love"
+- Central Line — "Walking into Sunshine"
 
 {{< /details >}}
